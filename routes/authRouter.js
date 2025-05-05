@@ -42,6 +42,7 @@ router.post("/register", async (req, res) => {
         httpOnly: false,
         secure: true,
         sameSite: "none",
+        domain:'.vercel.app',
         maxAge: 24 * 60 * 60 * 1000,
       })
       .status(200)
