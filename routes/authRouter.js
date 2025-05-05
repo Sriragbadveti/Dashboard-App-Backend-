@@ -84,7 +84,7 @@ router.post("/login", async (req, res) => {
       secret,
       { expiresIn: "1d" }
     );
-
+    console.log("Sending cookie to origin:", req.headers.origin);
     res
       .cookie("token", token, {
         httpOnly: true,
