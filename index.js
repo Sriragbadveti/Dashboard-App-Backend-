@@ -13,7 +13,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "https://eloquent-muffin-11e346.netlify.app",
+    origin: "https://dashboard-app-frontend-eight.vercel.app",
     credentials: true,
   })
 );
