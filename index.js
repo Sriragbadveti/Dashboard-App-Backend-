@@ -9,10 +9,14 @@ const app = express();
 // Middlewares
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({
-  origin: "http://localhost:5173", // React app port
-  credentials: true
-}));
+
+
+app.use(
+  cors({
+    origin: "https://eloquent-muffin-11e346.netlify.app",
+    credentials: true,
+  })
+);
 
 // Routers
 const authRouter = require("./routes/authRouter.js");
