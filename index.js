@@ -5,7 +5,7 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 
 const app = express();
-
+app.set("trust proxy" , true);
 // Middlewares
 app.use(express.json());
 app.use(cookieParser());
@@ -15,6 +15,7 @@ app.use(
   cors({
     origin: "https://dashboard-app-frontend-eight.vercel.app",
     credentials: true,
+    exposedHeaders:["set-cookie"],
   })
 );
 
