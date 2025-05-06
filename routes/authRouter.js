@@ -92,7 +92,8 @@ router.post("/login", async (req, res) => {
         secure: true,
         sameSite: "none",
         maxAge: 24 * 60 * 60 * 1000,
-        partitioned:true
+        partitioned:true,
+        path : "/",
       })
       .status(200)
       .send({ message: "User has been logged in successfully" });
